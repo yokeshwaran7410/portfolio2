@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Yokeshwaran A V | Aspiring game developer skilled in Unity, Unreal Engine, and C#. Portfolio of projects and skills." />
+  <title>Yokeshwaran A V | Game Developer Portfolio</title>
+  <link rel="stylesheet" href="yogi.css" />
+
+  <!-- Vanta.js and Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+
+<body>
+
+  <header id="vanta-header">
+    <h1>Hi, I'm Yokeshwaran A V</h1>
+    <p>Aspiring Game Developer | B.Tech IT Student</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a 3rd year B.Tech Information Technology student at P.A. College of Engineering and Technology.
+      Passionate about building games using Unity, Unreal Engine, and C#. I love creating interactive gameplay,
+      experimenting with game mechanics, and learning new tools in the gaming world.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Unity (2D & 3D Game Development)</li>
+      <li>C# Programming</li>
+      <li>Unreal Engine Basics (Blueprints)</li>
+      <li>C++, Python</li>
+      <li>Game Design & Mechanics</li>
+      <li>Blender (Basic 3D Modeling)</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <img src="C:\Users\gokul\Downloads\zombie.jpg" alt="Zombie Shooter" />
+      <h3>Zombie Shooter (Unity)</h3>
+      <p>3D first-person shooter game with enemy AI and wave-based gameplay. Developed with Unity and C#.</p>
+    </div>
+
+    <div class="project">
+      <img src="C:\Users\gokul\Downloads\2dplatform.jpg" alt="2D Platformer" />
+      <h3>2D Platformer</h3>
+      <p>Platformer game with jumping mechanics, collectibles, and multiple levels.</p>
+    </div>
+
+    <div class="project">
+      <img src="C:\Users\gokul\Downloads\snake.jpg" alt="Snake Game" />
+      <h3>Snake Game (Python)</h3>
+      <p>Classic snake game made using Pygame, with speed increase and scoring features.</p>
+    </div>
+
+    <div class="project">
+      <img src="C:\Users\gokul\Downloads\township.jpg" alt="Township Game" />
+      <h3>Township</h3>
+      <p>Simulation-style farming and city-building game inspired by Township mechanics.</p>
+    </div>
+
+    <div class="project">
+      <img src="C:\Users\gokul\Downloads\uncharted.jpg" alt="Uncharted Game" />
+      <h3>Uncharted Inspired Adventure</h3>
+      <p>Third-person action-adventure level designed with puzzle-solving and climbing mechanics.</p>
+    </div>
+
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.Tech in Information Technology<br />
+      P.A. College of Engineering and Technology, Tamil Nadu<br />
+      2023 – 2027 (Expected)</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Email:</strong> <a href="mailto:yokeshwaranav@example.com">yokeshwaranav@example.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yokeshwaranav" target="_blank">github.com/yokeshwaranav</a>
+    </p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yokeshwaranav"
+        target="_blank">linkedin.com/in/yokeshwaranav</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Yokeshwaran A V. All rights reserved.</p>
+  </footer>
+
+  <!-- Initialize Vanta -->
+  <script>
+    VANTA.WAVES({
+      el: "#vanta-header",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x1e1e1e,
+      shininess: 50.0,
+      waveHeight: 20.0,
+      waveSpeed: 0.75,
+      zoom: 0.85
+    })
+  </script>
+
+  <!-- Scroll animation for projects -->
+  <script>
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+        rect.right >= 0
+      );
+    }
+
+    function animateProjects() {
+      const projects = document.querySelectorAll('.project');
+      projects.forEach(project => {
+        if (isInViewport(project) && !project.classList.contains('visible')) {
+          project.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateProjects);
+    window.addEventListener('load', animateProjects);
+  </script>
+
+</body>
+
+</html>
